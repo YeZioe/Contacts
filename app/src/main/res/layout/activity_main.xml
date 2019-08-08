@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.contacts.Control.TitleLayout
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"></com.contacts.Control.TitleLayout>
+
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_incomming"
+            android:drawableTop="@drawable/tab_menu_incomming"
+            style="@style/tab_menu_item"
+            android:text="@string/incomming"/>
+
+        <RadioButton
+            android:id="@+id/rb_contacts"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_contacts"
+            android:text="@string/contacts"/>
+
+        <RadioButton
+            android:id="@+id/rb_favorite"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_favorite"
+            android:text="@string/favorite"/>
+
+        <RadioButton
+            android:id="@+id/rb_postcard"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_postcard"
+            android:text="@string/my"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/colorblack"
+        android:layout_above="@id/tab_menu"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_title"
+        android:layout_above="@id/tab_menu"
+        android:background="@color/colorWhite">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

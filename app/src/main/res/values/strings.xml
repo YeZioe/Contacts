@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="contacts">联系人</string>
+    <string name="incomming">来电记录</string>
+    <string name="favorite">备忘</string>
+    <string name="my">名片</string>
+</resources>

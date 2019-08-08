@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/people_photo"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/phone_photo"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/people_photo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="小沙"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/people_photo"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"
+        android:text="13674058922"/>
+
+
+</RelativeLayout>
