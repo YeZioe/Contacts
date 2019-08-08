@@ -39,6 +39,7 @@ public class ContactsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG, "onCreate: ");
 
         Button button = (Button) getActivity().findViewById(R.id.add_button);
 
@@ -48,17 +49,12 @@ public class ContactsFragment extends Fragment {
 
                 startActivityForResult(new Intent(getActivity(),AddContactsActivity.class),1);
 
-                if(name != null && number != null) {
-                    addPhotoEnger();
-                }
                 Log.i(TAG, "点击时间"+name);
 
 
             }
         });
-
-        Log.i(TAG, "onCreate: ");
-
+        
 
     }
 
@@ -77,6 +73,22 @@ public class ContactsFragment extends Fragment {
         return view;
     }
 
+
+    public void onPause(){
+        super.onPause();
+        Log.i(TAG, "onPause: ");
+    }
+    
+    public void onResume(){
+        super.onResume();
+
+        if(name != null && number != null) {
+            addPhotoEnger();
+        }
+
+        Log.i(TAG, "onResume: ");
+    }
+    
 
     public void initPhoneEntities() {
 
